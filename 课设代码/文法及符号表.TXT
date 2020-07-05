@@ -1,0 +1,31 @@
+/*
+  文法
+1    Program->BEGIN Stmt-List END
+2    Stmt-List->Stmt Stmt-List'
+3    Stmt-List'->Stmt Stmt-List' | .
+4    Stmt->Assign-stmt
+5    Assign-stmt->ID = Expr
+6    Expr->Term Expr'
+7    Expr'->Add-Op Term Expr' | .
+8    Term->Factor Term'
+9    Term'->Multiple-Op Factor Term' | .
+10    Factor->( Expr ) | ID | NUM
+11    Add-Op->+ | -
+12    Multiple-Op->* | /
+
+  预测分析表
+非终结符号    输入符号
+            BEGIN    ‘+’    ‘-’    ‘*’    ‘/’    (    )    ‘=’    ID    NUM    END    $
+Program        1
+Stmt-List                                                            2
+Stmt-List'                                                            3        .
+Stmt                                                                4
+Assign-stmt                                                            5
+Expr                                                6                6    6
+Expr'                7        7                            .            .        .
+Term                                                8                8    8
+Term'                .        .        9        9            .            .        .
+Factor                                                10_1            10_210_3
+Add-Op                11_1    11_2
+Multiple-Op                            12_1    12_2
+*/
