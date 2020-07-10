@@ -1,0 +1,5 @@
+BEGIN
+t1=c+2
+t2=b*t1
+a=t2
+END

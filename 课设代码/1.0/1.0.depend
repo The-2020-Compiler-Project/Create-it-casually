@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1594344330 source:c:\users\dell\desktop\tgkw_first\1.0\main.cpp
+	<iostream>
+	<string.h>
+	<stdio.h>
+	<stack>
+	<stdlib.h>
+

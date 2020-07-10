@@ -1,0 +1,3 @@
+BEGIN
+	a=4a6
+END
